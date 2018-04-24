@@ -23,10 +23,10 @@ import colors from '@/runner/colors'
 const LoadingCard= (props)=>{
   return (
     <View style={styles.container}>
-      <View style={{width:200, height: 80, backgroundColor:'#CDDC39',padding:10, paddingTop:5}}>
-        <Icon style={styles.text} name='ios-time-outline' size={22} />
-        <Text style={[styles.text,{}]}>Loading...</Text>
-        <Icon style={styles.text} name='ios-close-outline' size={22} />
+      <View style={{flexDirection: 'row', width:200, height: 80, backgroundColor:'#CDDC39',padding:10, paddingTop:5}}>
+          <Icon style={styles.text} name='ios-time-outline' size={22} />
+          <Text style={[styles.text,{flex: 1, alignSelf: 'center'}]}>Loading...</Text>
+          <Icon style={styles.text} name='ios-close-outline' size={22} />
       </View>
     </View>
   )
@@ -52,4 +52,3 @@ const styles = StyleSheet.create({
 
 LoadingCard.displayName = 'LoadingCard'
 export default LoadingCard
-

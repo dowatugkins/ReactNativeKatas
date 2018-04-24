@@ -19,7 +19,7 @@ import colors from '@/runner/colors'
 const FillAll = (props)=>{
   return (
     <View style={styles.container}>
-      <Icon style={{color:'white'}} name='ios-bulb-outline' size={120} />
+      <Icon style={styles.text} name='ios-bulb-outline' size={120} />
     </View>
   )
 }
@@ -30,10 +30,12 @@ const FillAll = (props)=>{
 const styles = StyleSheet.create({
   container: {
     backgroundColor: colors[0],
+    flex: 1,
+    alignItems: 'center',
+    justifyContent: 'center',
   },
   text:{
     color: 'white',
-    textAlign:'center'
   }
 });
 
@@ -43,4 +45,3 @@ const styles = StyleSheet.create({
 
 FillAll.displayName = 'FillAll'
 export default FillAll
-

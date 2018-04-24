@@ -16,9 +16,16 @@ const chart = [11, 50, 2, 42, 10, 8]
 
 //TODO: remove the text element and replace it with a real bar
 const Bar = (props)=>{
+  let largest = 0;
+  chart.map(value => {
+    if (value > largest) {
+      largest = value;
+    }
+  });
   return(
     <View>
-      <Text>Bar!</Text>
+      <View style={{flex: largest - props.val}} />
+      <View style={[styles.bar, {flex: props.val}]} />
     </View>
   )
 }
@@ -50,6 +57,7 @@ const styles = StyleSheet.create({
     backgroundColor: colors[1],
   },
   chart:{
+    flexDirection: 'row',
      height:100,
   },
   bar:{
@@ -67,4 +75,3 @@ const styles = StyleSheet.create({
 
 SimpleChart.displayName = 'SimpleChart'
 export default SimpleChart
-

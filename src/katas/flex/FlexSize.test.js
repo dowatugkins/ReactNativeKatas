@@ -25,17 +25,17 @@ import colors from '@/runner/colors'
 const FlexSize= (props)=>{
   return (
     <View style={styles.container}>
-      <View style={{}}>
-        <Box style={{}}/>
+      <View style={{flex: 1}}>
+        <Box style={{flex: .7}}/>
         <Box style={{backgroundColor:'yellow'}}/>
         <Box/>
-        <Box style={{backgroundColor:'yellow'}}/>
+        <Box style={{backgroundColor:'yellow', flex: .3}}/>
       </View>
-      <View style={{}}>
+      <View style={{flex: 1}}>
         <Box style={{flex:1}}/>
         <Box style={{backgroundColor:'yellow'}}/>
         <Box/>
-        <Box style={{backgroundColor:'yellow'}}/>
+        <Box style={{backgroundColor:'yellow', flex: 1}}/>
       </View>
     </View>
   )
@@ -56,4 +56,3 @@ const styles = StyleSheet.create({
 
 FlexSize.displayName = 'FlexSize'
 export default FlexSize
-

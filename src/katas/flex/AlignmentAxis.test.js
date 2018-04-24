@@ -24,8 +24,10 @@ const AlignmentAxis= (props)=>{
   return (
     <View style={styles.container}>
       <Box />
-      <Box />
-      <Box />
+      <View style={{flex: 1, justifyContent: 'flex-end', alignItems: 'flex-end'}}>
+        <Box />
+        <Box />
+      </View>
       <Box />
     </View>
   )
@@ -51,4 +53,3 @@ const styles = StyleSheet.create({
 
 AlignmentAxis.displayName = 'AlignmentAxis'
 export default AlignmentAxis
-
